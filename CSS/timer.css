@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Hanging Letters";
-    src: url("17575.ttf");
+    src: url("../fonts/17575.ttf");
 }
 .parent {
 
@@ -25,6 +25,7 @@
         border-style: solid;
         border-color: black;
         border-radius: 10%;
+        min-width: 522px;
 
 
     }
