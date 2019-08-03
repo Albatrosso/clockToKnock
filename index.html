@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
-    <link rel="stylesheet" href="CSS/timer.css">
-    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/timer.css" />
+    <link rel="stylesheet" href="CSS/normalize.css" />
     <script async src="JS/timer.js"></script>
-</head>
-<body>
-<div class="search-form">
-    <form action="http://www.google.com/search" method="get">
-        <input type="text" name="q" placeholder="google search"/>
-        <input type="submit" value="search" />
-    </form>
-</div>
-<div class="parent">
-
-    <div class="clock" id="clockdiv">
-
-        <span class="days"></span>
-        <span class="hours"></span>
-        <span class="minutes"></span>
-        <span class="seconds"></span>
+  </head>
+  <body>
+    <div class="interface">
+      <div class="search-form">
+        <form action="http://www.google.com/search" method="get">
+          <input
+            class="gsearch"
+            type="text"
+            name="q"
+            placeholder="google search"
+          />
+          <input class="btn" type="submit" value="search" />
+        </form>
+      </div>
+      <div class="parent">
+        <div class="clock" id="clockdiv">
+          <span class="days"></span>
+          <span class="hours"></span>
+          <span class="minutes"></span>
+          <span class="seconds"></span>
+        </div>
+      </div>
     </div>
-</div>
-
-</body>
+  </body>
 </html>
