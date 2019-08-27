@@ -2,12 +2,15 @@ const DEADLINE = "December 25 2023 12:00:00 GMT+2:00";
 
 function getTimeRemaining(endtime) {
   let t = Date.parse(endtime) - Date.parse(new Date());
+  console.log(t);
+  let years = Math.floor(t / (1000 * 60 * 60 * 24 * 365));
   let seconds = Math.floor((t / 1000) % 60);
   let minutes = Math.floor((t / 1000 / 60) % 60);
   let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
   let days = Math.floor(t / (1000 * 60 * 60 * 24));
   return {
     total: t,
+    years: years,
     days: days,
     hours: hours,
     minutes: minutes,
@@ -17,6 +20,7 @@ function getTimeRemaining(endtime) {
 
 function initializeClock(endtime, id) {
   let clock = document.getElementById(id);
+  let yearsSpan = clock.querySelector(".years");
   let daysSpan = clock.querySelector(".days");
   let hoursSpan = clock.querySelector(".hours");
   let minutesSpan = clock.querySelector(".minutes");
@@ -24,7 +28,7 @@ function initializeClock(endtime, id) {
 
   function updateClock() {
     let t = getTimeRemaining(endtime);
-
+    yearsSpan.innerHTML = ("0" + t.years + ":").slice(-3);
     daysSpan.innerHTML = ("0" + t.days + ":").slice(-3);
     hoursSpan.innerHTML = ("0" + t.hours + ":").slice(-3);
     minutesSpan.innerHTML = ("0" + t.minutes + ":").slice(-3);
