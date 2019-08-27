@@ -1,4 +1,4 @@
-const DEADLINE = "December 25 2013 12:00:00 GMT+2:00";
+const DEADLINE = "December 25 2023 12:00:00 GMT+2:00";
 
 function getTimeRemaining(endtime) {
   let t = Date.parse(endtime) - Date.parse(new Date());
